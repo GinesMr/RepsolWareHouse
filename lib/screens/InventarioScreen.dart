@@ -29,7 +29,7 @@ class InventarioScreen extends StatelessWidget {
           'Inventario',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        centerTitle: true, // Centra el título
+        centerTitle: true,
       ),
       body: ListView.builder(
         itemCount: bombonas.length,
