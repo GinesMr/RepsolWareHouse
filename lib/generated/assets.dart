@@ -5,6 +5,8 @@ class Assets {
   static const String assetsRepsolLogo = 'assets/Repsol_Logo.png';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';
+  static const String modelsBomobona = 'lib/models/Bomobona.dart';
+  static const String screensBomobona = 'lib/screens/Bomobona.dart';
   static const String screensDashboardScreen = 'lib/screens/DashboardScreen.dart';
   static const String screensHome = 'lib/screens/Home.dart';
   static const String screensInventarioScreen = 'lib/screens/InventarioScreen.dart';

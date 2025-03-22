@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class InventarioScreen extends StatelessWidget {
@@ -57,6 +58,12 @@ class InventarioScreen extends StatelessWidget {
           );
         },
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+       print("hola");},
+          backgroundColor: CupertinoColors.systemFill,
+          child: Icon(Icons.add,color:Colors.orangeAccent,),
+      ),
+
     );
   }
 }
