@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:try1/models/Bombona.dart';
+
+import 'BombonaScreen.dart';
 
 class InventarioScreen extends StatelessWidget {
   final List<Map<String, dynamic>> bombonas = [
@@ -52,16 +55,33 @@ class InventarioScreen extends StatelessWidget {
               ),
               trailing: Icon(Icons.arrow_forward_ios,color: Colors.orangeAccent,),
               onTap: () {
-                print("Seleccionado: ${bombona["nombre"]}");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BombonaScreen(bombona: Bombona('gines', 2, 3, 232, DateTime.now()),),
+                  ),
+                );
               },
             ),
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){
-       print("hola");},
-          backgroundColor: CupertinoColors.systemFill,
-          child: Icon(Icons.add,color:Colors.orangeAccent,),
+      floatingActionButton: ElevatedButton(
+        onPressed: () {
+          print("hola");
+        },
+        style: ElevatedButton.styleFrom(
+          shape: ContinuousRectangleBorder(),
+          padding: EdgeInsets.all(20),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.add, color: Colors.orangeAccent),
+            SizedBox(width: 5),
+            Text('Agregar Bombona'),
+          ],
+        ),
       ),
 
     );

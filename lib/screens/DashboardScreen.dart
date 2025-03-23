@@ -7,13 +7,15 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        title: Text(""),
+      ),
       body: Padding(
         padding: EdgeInsets.all(0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height:20),
               ClockWidget(fontSize: 20),//Clock
               SizedBox(height:40),
               Text(
@@ -76,17 +78,6 @@ class DashboardScreen extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(
-              child: _buildActionCard(
-                icon: Icons.add,
-                label: 'Añadir Bombona',
-                onTap: () {
-                  print('Agregar Bombona');
-                },
-              ),
-            ),
-            SizedBox(width: 10),
-
             Expanded(
               child: _buildActionCard(
                 icon: Icons.list,
